@@ -55,3 +55,33 @@ class Schedule:
         self.scheduleStatus= scheduleStatus
         self.departmentId =departmentId
         self.totalEmployeesPerDay =totalEmployeesPerDay
+class Shift:
+    def __init__(self, shiftId, shiftDayOfWeek,shiftStartTime,shiftEndTime):
+        self.shiftId = shiftId
+        self.shiftDayOfWeek =shiftDayOfWeek
+        self.shiftStartTime =shiftStartTime
+        self.shiftEndTime =shiftEndTime
+
+
+class Availability:
+    def __init__(self,availabilityId,employeeId, date, startTime,endTime,status):
+        self.availabilityId= availabilityId
+        self.employeeId =employeeId
+        self.date= date
+        self.startTime= startTime
+        self.endTime= endTime
+        self.status= status
+
+
+class Task:
+    def __init__(self, taskId, taskName,taskDescription, status,timeSpent, assignedDate):
+        self.taskId= taskId
+        self.taskName =taskName
+        self.taskDescription =taskDescription
+        self.status =status
+        self.timeSpent= timeSpent
+        self.assignedDate= assignedDate
+
+
+
+
