@@ -18,3 +18,8 @@ class DatabaseManager:
 
     def close(self):
         self.connection.close()
+
+if __name__ == "__main__":
+    db = DatabaseManager()
+    db.create_tables()
+    db.close()
