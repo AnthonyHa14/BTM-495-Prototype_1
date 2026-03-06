@@ -16,6 +16,28 @@ class Employee(User):
         self.employmentStatus= employmentStatus
         self.hourlyRate =hourlyRate
 
+class Address:
+    def __init__(self, postalCode,streetName, province):
+        self.postalCode= postalCode
+        self.streetName = streetName
+        self.province =province
+
+
+class IncidentForm:
+    def __init__(self, incidentId,userId, date,description, status):
+        self.incidentId =incidentId
+        self.userId =userId
+        self.date =date
+        self.description =description
+        self.status =status
+
+class Notification:
+    def __init__(self,notificationId,message, userId, createdDateTime,status):
+        self.notificationId =notificationId
+        self.message =message
+        self.userId =userId
+        self.createdDateTime =createdDateTime
+        self.status = status
 
 class Manager(User):
     def __init__(self, userId,firstName, lastName, phoneNumber,email, password,dob, permission,yearlySalary):
