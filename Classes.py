@@ -16,6 +16,14 @@ class Employee(User):
         self.employmentStatus= employmentStatus
         self.hourlyRate =hourlyRate
 
+class Manager(User):
+    def __init__(self, userId,firstName, lastName, phoneNumber,email, password,dob, permission,yearlySalary):
+        super().__init__(userId, firstName,lastName, phoneNumber,email, password,dob)
+        self.permission= permission
+        self.yearlySalary =yearlySalary
+
+
+
 class Address:
     def __init__(self, postalCode,streetName, province):
         self.postalCode= postalCode
@@ -39,8 +47,11 @@ class Notification:
         self.createdDateTime =createdDateTime
         self.status = status
 
-class Manager(User):
-    def __init__(self, userId,firstName, lastName, phoneNumber,email, password,dob, permission,yearlySalary):
-        super().__init__(userId, firstName,lastName, phoneNumber,email, password,dob)
-        self.permission= permission
-        self.yearlySalary =yearlySalary
+class Schedule:
+    def __init__(self, scheduleId,weekStartDate, weekEndDate, scheduleStatus,departmentId,totalEmployeesPerDay):
+        self.scheduleId =scheduleId
+        self.weekStartDate= weekStartDate
+        self.weekEndDate =weekEndDate
+        self.scheduleStatus= scheduleStatus
+        self.departmentId =departmentId
+        self.totalEmployeesPerDay =totalEmployeesPerDay
