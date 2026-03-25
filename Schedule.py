@@ -1,5 +1,5 @@
 class Schedule:
-    def __init__(self, scheduleId,weekStartDate, weekEndDate, scheduleStatus,departmentId,totalEmployeesPerDay):
+    def __init__(self, shiftId, shiftDayOfWeek,shiftStartTime,shiftEndTime):
         self.shiftId = shiftId
         self.shiftDayOfWeek = shiftDayOfWeek
         self.shiftStartTime = shiftStartTime
