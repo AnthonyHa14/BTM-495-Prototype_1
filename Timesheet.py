@@ -2,7 +2,7 @@ class Timesheet:
     def __init__(self,timesheetId,shiftId, employeeId,totalHoursWorked):
         self.timesheetId= timesheetId
         self.shiftId= shiftId
-        self.employeeId =employeeId
+        self.userId =userId
         self.totalHoursWorked =totalHoursWorked
 
 #Calculate total hours worked
