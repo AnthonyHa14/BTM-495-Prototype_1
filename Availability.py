@@ -20,7 +20,7 @@ class Availability:
             print("Availability is valid")
             return True
         else:
-            print("Availability is invalid")
+            print("Please fill out missing information")
             return False
             
  #Get the shift details
