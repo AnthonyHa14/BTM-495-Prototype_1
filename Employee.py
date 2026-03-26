@@ -1,10 +1,11 @@
+from User import User
 class Employee(User):
-    def __init__(self, userId, firstName, lastName, phoneNumber, email, password,dob, department, employmentStatus, hourlyRate):
-        super().__init__(userId, firstName,lastName, phoneNumber, email,password, dob)
-        self.department =department
-        self.employmentStatus= employmentStatus
-        self.hourlyRate =hourlyRate
-
+    def __init__(self,userId: int,firstName: str, lastName: str, phoneNumber: str, email: str,password: str, dob: str,department: str,employmentStatus: str, hourlyRate: float):
+        super().__init__(userId,firstName, lastName, phoneNumber,email,password,dob)
+        self.department: str =department
+        self.employmentStatus:str= employmentStatus
+        self.hourlyRate: float=hourlyRate
+                     
 # Select availability tab
     def selectAvailabilityTab(self):
         print("Availability tab selected.")
