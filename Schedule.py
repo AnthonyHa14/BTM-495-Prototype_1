@@ -1,10 +1,12 @@
 class Schedule:
-    def __init__(self, shiftId, shiftDayOfWeek,shiftStartTime,shiftEndTime):
-        self.shiftId = shiftId
-        self.shiftDayOfWeek = shiftDayOfWeek
-        self.shiftStartTime = shiftStartTime
-        self.shiftEndTime = shiftEndTime
-
+    def __init__(self, scheduleId: int, weekStartDate: str, weekEndDate: str,scheduleStatus: str,departmentId: int,totalEmployeesPerDay: int):
+        self.scheduleId:int =scheduleId
+        self.weekStartDate:str =weekStartDate
+        self.weekEndDate:str =weekEndDate
+        self.scheduleStatus:str= scheduleStatus
+        self.departmentId: int=departmentId
+        self.totalEmployeesPerDay:int= totalEmployeesPerDay
+        
  # Save the schedule as a draft
     def saveScheduleDraft(self):
         self.scheduleStatus = "draft"
