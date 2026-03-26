@@ -55,7 +55,7 @@ class Task:
             print("Response confirmed")
             return True
         else:
-            print("Response is invalid")
+            print("Response is empty")
             return False
 
 # Send a reminder notification
