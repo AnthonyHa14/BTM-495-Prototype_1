@@ -12,7 +12,7 @@ class IncidentForm:
             print("Incident form valid")
             return True
         else:
-            print("Incident form invalid")
+            print("Please fill out the form")
             return False
 
   #Submit incident form
