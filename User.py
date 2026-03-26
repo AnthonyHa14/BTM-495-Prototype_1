@@ -28,12 +28,12 @@ def submitForValidation(self):
         self.lastName == "" or
         self.email == "" or
         self.password == ""):
-        print("Validation failed: Missing required fields.")
+        print("Validation failed: Missing required fields")
         return False
             
     # Simple email format check
     if "@" not in self.email or "." not in self.email:
-        print("Validation failed: Invalid email format.")
+        print("Validation failed: Invalid email format")
         return False
 
     # Simple password length check
