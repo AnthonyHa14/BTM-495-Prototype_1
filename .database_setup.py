@@ -1,28 +1,97 @@
 
 import sqlite3
 
-class DatabaseManager:
+# Connect to SQLite database
+connection = sqlite3.connect("schedule.db")
 
-    def __init__(self, db_name="schedule.db"):
-        self.connection = sqlite3.connect(db_name)
-        self.cursor = self.connection.cursor()
+cursor = connection.cursor()
 
-    def create_tables(self):
+# USERS TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Users (
+    userId INTEGER PRIMARY KEY,
+    firstName TEXT,
+    lastName TEXT,
+    phoneNumber TEXT,
+    email TEXT,
+    password TEXT,
+    dob TEXT,
+    department TEXT,
+    employmentStatus TEXT,
+    hourlyRate REAL,
+    permission TEXT,
+    yearlySalary REAL)""")
 
-        self.cursor.execute(
-            "CREATE TABLE IF NOT EXISTS Users (userId INTEGER PRIMARY KEY, firstName TEXT, lastName TEXT, email TEXT)"
-        )
+# SCHEDULE TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Schedule (
+    scheduleId INTEGER PRIMARY KEY,
+    weekStartDate TEXT,
+    weekEndDate TEXT,
+    scheduleStatus TEXT,
+    departmentId INTEGER,
+    totalEmployeesPerDay INTEGER)""")
 
-        self.cursor.execute(
-            "CREATE TABLE IF NOT EXISTS Schedule (scheduleId INTEGER PRIMARY KEY, weekStartDate TEXT, weekEndDate TEXT, scheduleStatus TEXT)"
-        )
+# SHIFT TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Shift (
+    shiftId INTEGER PRIMARY KEY,
+    shiftDayOfWeek TEXT,
+    shiftStartTime INTEGER,
+    shiftEndTime INTEGER)""")
 
-        self.connection.commit()
+# AVAILABILITY TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Availability (
+    availabilityId INTEGER PRIMARY KEY,
+    userId INTEGER,
+    date TEXT,
+    startTime INTEGER,
+    endTime INTEGER,
+    status TEXT)""")
 
-    def close(self):
-        self.connection.close()
+# TIMESHEET TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Timesheet (
+    timesheetId INTEGER PRIMARY KEY,
+    shiftId INTEGER,
+    userId INTEGER,
+    totalHoursWorked REAL)""")
 
-if __name__ == "__main__":
-    db = DatabaseManager()
-    db.create_tables()
-    db.close()
+# CHECKLIST TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Checklist (
+    checklistId INTEGER PRIMARY KEY,
+    shiftId INTEGER,
+    userId INTEGER,
+    taskDescription TEXT,
+    taskStatus TEXT,
+    timeSpent REAL)""")
+
+# NOTIFICATION TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Notification (
+    notificationId INTEGER PRIMARY KEY,
+    message TEXT,
+    userId INTEGER,
+    status TEXT,
+    timestamp TEXT)""")
+
+# INCIDENT FORM TABLE
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS IncidentForm (
+    incidentId INTEGER PRIMARY KEY,
+    userId INTEGER,
+    date TEXT,
+    description TEXT,
+    status TEXT)""")
+
+# Save changes
+connection.commit()
+
+print("All database tables created successfully")
+
+# Close connection
+connection.close()
+
+print("Database connection closed")
