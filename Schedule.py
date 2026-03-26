@@ -7,30 +7,30 @@ class Schedule:
         self.departmentId: int=departmentId
         self.totalEmployeesPerDay:int= totalEmployeesPerDay
         
- # Save the schedule as a draft
+ # Save the schedule draft
     def saveScheduleDraft(self):
         self.scheduleStatus = "draft"
-        print("Schedule draft saved.")
+        print("Schedule draft successfully saved")
         return True
         
-# Save the schedule as published
+# Save the schedule 
     def savePublishedSchedule(self):
         self.scheduleStatus = "published"
-        print("Schedule published.")
+        print("Schedule published")
         return True
 
  # Validate if there is enough shift coverage
     def validatesShiftCoverage(self):
         if self.totalEmployeesPerDay > 0:
-            print("Shift coverage valid.")
+            print("Shift coverage valid")
             return True
         else:
-            print("Shift coverage invalid.")
+            print("Shift coverage invalid")
             return False
 
 # Update the schedule with an employee and shift
     def updateSchedule(self, employeeId, shiftId):
-        print(f"Schedule updated with employee {employeeId} and shift {shiftId}.")
+        print(f"Schedule updated with employee {employeeId} and shift {shiftId}")
         return True
 
 # Calculate total scheduled hours
