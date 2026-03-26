@@ -72,3 +72,9 @@ class Employee(User):
         form = IncidentForm(1,userId,"2026-03-25", description, "pending")
         print("Incident form created.")
         return form
+        
+#Record time spent
+    def recordTimeSpent(self, taskId, hours):
+        message = "Recorded " + str(hours) + " hours for task " + str(taskId)
+        print(message)
+        return message
