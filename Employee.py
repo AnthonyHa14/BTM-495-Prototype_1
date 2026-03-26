@@ -2,18 +2,18 @@ from User import User
 class Employee(User):
     def __init__(self,userId: int,firstName: str, lastName: str, phoneNumber: str, email: str,password: str, dob: str,department: str,employmentStatus: str, hourlyRate: float):
         super().__init__(userId,firstName, lastName, phoneNumber,email,password,dob)
-        self.department: str =department
-        self.employmentStatus:str= employmentStatus
+        self.department: str=department
+        self.employmentStatus:  str= employmentStatus
         self.hourlyRate: float=hourlyRate
                      
 # Select availability tab
     def selectAvailabilityTab(self):
-        print("Availability tab selected.")
+        print("Availability tab selected")
         return True
 
  # Select schedule tab
     def selectScheduleTab(self):
-        print("Schedule tab selected.")
+        print("Schedule tab selected")
         return True
         
  # View assigned schedule
@@ -23,17 +23,17 @@ class Employee(User):
 
 # Confirm assigned shift
     def confirmSchedule(self, shiftId):
-        print(f"Shift {shiftId} confirmed.")
+        print(f"Shift {shiftId} confirmed")
         return True
 
  # Give away shift
     def giveAwayShift(self, shiftId, scheduleId):
-        print(f"Shift {shiftId} given away.")
+        print(f"Shift {shiftId} given away")
         return True
 
 # Take available shift
     def takeAvailableShift(self, shiftId, scheduleId):
-        print(f"Shift {shiftId} taken.")
+        print(f"Shift {shiftId} taken")
         return True
 
 
@@ -45,10 +45,10 @@ class Employee(User):
  # Validate employee info
     def submitForValidation(self):
         if self.firstName != "" and self.lastName != "":
-            print("Employee validation successful.")
+            print("Employee validation successful")
             return True
         else:
-            print("Employee validation failed.")
+            print("Employee validation failed")
             return False
             
  # Mark task complete
@@ -58,7 +58,7 @@ class Employee(User):
 
  # View timesheet
  def viewTimesheet(self):
-        print("Viewing timesheet.")
+        print("Viewing timesheet")
         return True
 
 # View task list
