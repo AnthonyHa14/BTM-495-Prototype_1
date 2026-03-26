@@ -1,11 +1,10 @@
 class Notification:
-    def __init__(self,notificationId,message, userId, createdDateTime,status):
-        self.notificationId =notificationId
-        self.message =message
-        self.userId =userId
-        self.createdDateTime =createdDateTime
-        self.status = status
-
+     def __init__(self, notificationId: int,message:str,userId:int,status:str, timestamp: str):
+        self.notificationId:int =notificationId
+        self.message: str =message
+        self.userId:int =userId
+        self.status:str =status
+        self.timestamp:str =timestamp
 
 # Validate message text
     def validateMessage(self, message):
