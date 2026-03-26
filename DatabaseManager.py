@@ -1,7 +1,7 @@
 class DatabaseManager:
-    def __init__(self, connectionString):
-        self.connectionString = connectionString
-        self.isConnected = False
+    def __init__(self, connectionString: str):
+        self.connectionString: str=connectionString
+        self.isConnected:bool =False
 
 #Connect to the database
     def connect(self):
