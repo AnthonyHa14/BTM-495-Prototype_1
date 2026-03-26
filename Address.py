@@ -22,8 +22,8 @@ class Address:
  # Validate postal code
     def validatePostalCode(self):
         if self.postalCode != "":
-            print("Postal code valid.")
+            print("Postal code valid")
             return True
         else:
-            print("Postal code invalid.")
+            print("Please fill out your Postal Code")
             return False
