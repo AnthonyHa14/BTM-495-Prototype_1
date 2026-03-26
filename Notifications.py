@@ -12,7 +12,7 @@ class Notification:
             print("Message valid")
             return True
         else:
-            print("Message invalid")
+            print("Please fill out this field.")
             return False
             
 # Get employee list
@@ -28,7 +28,7 @@ class Notification:
             print("Selection valid")
             return True
         else:
-            print("Selection invalid")
+            print("Please select at least one employee")
             return False
             
 #Store notification
