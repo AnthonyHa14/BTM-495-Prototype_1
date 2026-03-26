@@ -1,10 +1,10 @@
 class IncidentForm:
-    def __init__(self, incidentId,userId, date,description, status):
-        self.incidentId =incidentId
-        self.userId =userId
-        self.date =date
-        self.description =description
-        self.status =status
+    def __init__(self, incidentId: int,userId: int,date: str,description: str, status: str):
+        self.incidentId: int =incidentId
+        self.userId: int= userId
+        self.date: str= date
+        self.description:str = description
+        self.status: st =status
 
  # Validate incident form
     def validateIncidentForm(self):
