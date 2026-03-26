@@ -1,11 +1,12 @@
 class Availability:
-    def __init__(self, shiftId:int,checklistId:int,userId:int,taskDescription:str,taskStatus: str,timeSpent: float):
-        self.shiftId:int =shiftId
-        self.checklistId:int =checklistId
-        self.userId:int =userId
-        self.taskDescription:str =taskDescription
-        self.taskStatus: str =taskStatus
-        self.timeSpent:float =timeSpent
+    
+    def __init__(self,availabilityId: int,userId: int,date: str,startTime: int,endTime: int,status: str):
+        self.availabilityId: int = availabilityId
+        self.userId: int=userId
+        self.date: str =date
+        self.startTime: int= startTime
+        self.endTime: int =endTime
+        self.status: str =status
 
   # Create a new availability entry
     def createAvailability(self, date, startTime, endTime):
