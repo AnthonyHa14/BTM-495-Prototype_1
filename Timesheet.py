@@ -1,9 +1,9 @@
 class Timesheet:
-    def __init__(self,timesheetId,shiftId, employeeId,totalHoursWorked):
-        self.timesheetId= timesheetId
-        self.shiftId= shiftId
-        self.userId =userId
-        self.totalHoursWorked =totalHoursWorked
+    def __init__(self, timesheetId: int,shiftId: int,userId: int,totalHoursWorked: float):    
+        self.timesheetId:int = timesheetId
+        self.shiftId: int =shiftId
+        self.userId:int =userId
+        self.totalHoursWorked:float =totalHoursWorked
 
 #Calculate total hours worked
     def calculateTotalHours(self):
