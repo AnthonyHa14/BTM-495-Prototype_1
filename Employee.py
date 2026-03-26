@@ -56,6 +56,11 @@ class Employee(User):
         print(f"Task {taskId} marked {status}")
         return True
 
+#view Notification
+    def viewNotification(self):
+        print("Viewing notifications")
+        return True
+
  # View timesheet
  def viewTimesheet(self):
         print("Viewing timesheet")
@@ -70,9 +75,18 @@ class Employee(User):
     def createIncidentForm(self, userId, description):
         from Incident_Form import IncidentForm
         form = IncidentForm(1,userId,"2026-03-25", description, "pending")
-        print("Incident form created.")
+        print("Incident form created")
         return form
         
+#select task
+    def selectTask(self, checklistId):
+        if self.checklistId == checklistId:
+            print(f"Task {checklistId} selected")
+            return True
+        print("Task not found")
+        return False
+
+
 #Record time spent
     def recordTimeSpent(self, taskId, hours):
         message = "Recorded " + str(hours) + " hours for task " + str(taskId)
