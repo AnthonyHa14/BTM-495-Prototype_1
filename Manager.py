@@ -1,9 +1,13 @@
+from User import User
+
 class Manager(User):
-    def __init__(self, userId,firstName, lastName, phoneNumber,email, password,dob, permission,yearlySalary):
-        super().__init__(userId, firstName,lastName, phoneNumber,email, password,dob)
-        self.permission= permission
-        self.yearlySalary =yearlySalary
-        
+    def __init__(self,userId: int, firstName: str,  lastName: str,phoneNumber: str,email: str,password: str, dob: str,department: str,employmentStatus: str,hourlyRate: float):
+
+        super().__init__(userId, firstName,lastName, phoneNumber,email,password,dob)
+        self.department:str =department
+        self.employmentStatus:str=employmentStatus
+        self.hourlyRate float=hourlyRate
+                     
 #Create schedule draft
     def createScheduleDraft(self, shiftId, scheduleId, userId):
         print("Schedule draft created.")
