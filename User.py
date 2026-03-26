@@ -1,13 +1,13 @@
 class User:
-    def __init__(self, userId,firstName, lastName,phoneNumber,email,password,dob):
-        self.userId = userId
-        self.firstName= firstName
-        self.lastName= lastName
-        self.phoneNumber= phoneNumber
-        self.email =email
-        self.password =password
-        self.dob =dob
-        self.address = None
+    def __init__(self, userId: int, firstName: str, lastName: str,phoneNumber: str,email: str,password: str,dob: str):
+        self.userId:int =userId
+        self.firstName:str =firstName
+        self.lastName: str=lastName
+        self.phoneNumber:str =phoneNumber
+        self.email:str =email
+        self.password:str =password
+        self.dob:str =dob
+        self.address =None
 
 # Fill out the registration form with the given info
     def fillOutForm(self, firstName, lastName,phoneNumber, password,dob, address):
