@@ -1,11 +1,12 @@
 class Task:
-    def __init__(self, taskId, taskName,taskDescription, status,timeSpent, assignedDate):
-        self.taskId= taskId
-        self.taskName =taskName
+def __init__(self, shiftId, checklistId,userId,taskDescription, taskStatus, timeSpent):
+        self.shiftId= shiftId
+        self.checklistId =checklistId
+        self.userId= userId
         self.taskDescription =taskDescription
-        self.status =status
-        self.timeSpent= timeSpent
-        self.assignedDate= assignedDate
+        self.taskStatus = taskStatus
+        self.timeSpent=timeSpent
+
 
  # Create a new task
     def createTask(self, taskName, taskDescription):
